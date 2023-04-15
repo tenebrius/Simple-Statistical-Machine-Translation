@@ -1,8 +1,8 @@
 import re
 
-with open("ELRC-3569-EUR_LEX_covid.en-fr.en", "r", encoding="utf-8") as f:
+with open("corpus.en", "r", encoding="utf-8") as f:
     source_sentences = f.readlines()
-with open("ELRC-3569-EUR_LEX_covid.en-fr.fr", "r", encoding="utf-8") as f:
+with open("corpus.fr", "r", encoding="utf-8") as f:
     target_sentences = f.readlines()
 
 def fix(sentence):
@@ -56,11 +56,11 @@ target_sentences = [[tgt_vocab.index(word) for word in sentence] for sentence in
 
 #write to file
 print("Writing to file")
-with open("ELRC-3569-EUR_LEX_covid.en-fr.en.tok", "w", encoding="utf-8") as f:
+with open("corpus.en.tok", "w", encoding="utf-8") as f:
     for sentence in source_sentences:
         f.write(" ".join([str(x) for x in sentence]) + "\n")
 
-with open("ELRC-3569-EUR_LEX_covid.en-fr.fr.tok", "w", encoding="utf-8") as f:
+with open("corpus.fr.tok", "w", encoding="utf-8") as f:
     for sentence in target_sentences:
         f.write(" ".join([str(x) for x in sentence])  + "\n")
 

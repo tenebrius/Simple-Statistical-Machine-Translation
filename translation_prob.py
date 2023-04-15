@@ -9,9 +9,9 @@
 #   source_sentences = f.readlines()
 # UnicodeDecodeError: 'gbk' codec can't decode byte 0x93 in position 1814: illegal multibyte sequence
 
-with open("ELRC-3569-EUR_LEX_covid.en-fr.en.tok", "r", encoding="utf-8") as f:
+with open("corpus.en.tok", "r", encoding="utf-8") as f:
     source_sentences = f.read().splitlines()
-with open("ELRC-3569-EUR_LEX_covid.en-fr.fr.tok", "r", encoding="utf-8") as f:
+with open("corpus.fr.tok", "r", encoding="utf-8") as f:
     target_sentences = f.read().splitlines()
 
 
